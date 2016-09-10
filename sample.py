@@ -26,3 +26,5 @@ if __name__ == "__main__":
     plt.plot(model.predict(data[["SepalLength", "SepalWidth", "PetalLength"]]), "g")
     plt.show()
 
+    model.random_forest_regression()
+
