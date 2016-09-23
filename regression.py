@@ -71,7 +71,7 @@ class Regression:
                 "value": features_importance_value
             }
         )
-        sns.barplot(x='value', y='key', data=self.mportance)
+        sns.barplot(x='value', y='key', data=self.importance)
         plt.show()
 
     def analysis(self):
