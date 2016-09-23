@@ -64,7 +64,7 @@ class Regression:
 
         features_importance_rank = np.argsort(self.rm.feature_importances_)[::-1]
         features_importance_value = self.rm.feature_importances_[features_importance_rank]
-        features_importance_key = self.data[features_importance_rank].keys()
+        features_importance_key = self.data[self.explanatory_columns][features_importance_rank].keys()
         importance = pd.DataFrame(
             {
                 "key": features_importance_key,
