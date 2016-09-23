@@ -65,13 +65,13 @@ class Regression:
         features_importance_rank = np.argsort(self.rm.feature_importances_)[::-1]
         features_importance_value = self.rm.feature_importances_[features_importance_rank]
         features_importance_key = self.data[self.explanatory_columns][features_importance_rank].keys()
-        importance = pd.DataFrame(
+        self.importance = pd.DataFrame(
             {
                 "key": features_importance_key,
                 "value": features_importance_value
             }
         )
-        sns.barplot(x='value', y='key', data=importance)
+        sns.barplot(x='value', y='key', data=self.mportance)
         plt.show()
 
     def analysis(self):
